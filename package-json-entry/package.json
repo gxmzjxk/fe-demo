@@ -1,0 +1,24 @@
+{
+    "name": "relearn-webpack",
+    "version": "1.0.0",
+    "description": "",
+    "dependencies": {
+        "@isleepy/pkg-entry": "0.0.1",
+        "react": "^16.13.1"
+    },
+    "devDependencies": {
+        "html-webpack-plugin": "^4.0.4",
+        "open-browser-webpack-plugin": "0.0.5",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build_node": "export TARGET=node && webpack",
+        "build": "webpack",
+        "dev": "webpack-dev-server"
+    },
+    "author": "",
+    "license": "ISC"
+}
