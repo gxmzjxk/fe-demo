@@ -1,10 +1,9 @@
 {
-    "name": "relearn-webpack",
+    "name": "package-json-entry",
     "version": "1.0.0",
     "description": "",
     "dependencies": {
-        "@isleepy/pkg-entry": "0.0.1",
-        "react": "^16.13.1"
+        "@isleepy/pkg-entry": "0.0.1"
     },
     "devDependencies": {
         "html-webpack-plugin": "^4.0.4",
@@ -14,11 +13,11 @@
         "webpack-dev-server": "^3.10.3"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "build_node": "export TARGET=node && webpack",
         "build": "webpack",
-        "dev": "webpack-dev-server"
+        "dev": "webpack-dev-server",
+        "dev_node": "export TARGET=node && webpack-dev-server"
     },
-    "author": "",
+    "author": "Xiaokun Jiang",
     "license": "ISC"
 }

@@ -3,7 +3,7 @@
  * @Author: Xiaokun.jiang
  * @Email: jiangxiaokun@bytedance.com
  * @Date: 2020-04-05 16:59:59
- * @LastEditTime: 2020-04-06 18:20:35
+ * @LastEditTime: 2020-04-06 18:45:29
  */
 
 const path = require('path');
@@ -13,30 +13,27 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const isNode = process.env.TARGET === 'node';
 
 module.exports = {
-    entry: {
-        // cjs_main: './src/cjs-main.js',
-        // cjs_main_node: './src/cjs-main-node.js',
-        // es_main: './src/es-main.js',
-        // es_main_node: './src/es-main-node.js',
-        main: './src/main.js'
-    },
-    mode: 'production',
+    entry: isNode
+        ? {
+              cjs_main_node: './src/cjs-main-node.js',
+              es_main_node: './src/es-main-node.js'
+          }
+        : {
+              cjs_main: './src/cjs-main.js',
+              es_main: './src/es-main.js'
+          },
+    mode: 'development',
     target: isNode ? 'node' : 'web',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, 'dist')
     },
-    // devServer: {
-    //     contentBase: path.join(__dirname, '/'),
-    //     compress: true,
-    //     port: 9000
-    // },
-    plugins: isNode
-        ? []
-        : [
-              new HtmlWebpackPlugin(),
-              new OpenBrowserPlugin({ url: 'http://localhost:9000' })
-          ]
+    devServer: {
+        contentBase: path.join(__dirname, './src/main.js'),
+        compress: true,
+        port: 9000
+    },
+    plugins: [
+        new HtmlWebpackPlugin(),
+        new OpenBrowserPlugin({ url: 'http://localhost:9000' })
+    ]
 };
-
-module.exports = {};
