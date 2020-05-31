@@ -1,0 +1,52 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:37:10
+ * @LastEditTime: 2020-05-25 00:44:26
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左文右图布局丶一种实现</title>
+    <style>
+        .box {
+            overflow: hidden;
+        }
+
+        .img {
+            width: 128px;
+            height: 128px;
+        }
+
+        /* 右浮动，图片DOM在后，和视觉表现一致 */
+        .box-right-same > .full {
+            width: 100%;
+            float: left;
+        }
+
+        .box-right-same > .full > p {
+            margin-right: 140px;
+        }
+
+        .box-right-same > img {
+            float: left;
+            margin-left: -128px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>右侧固定-DOM顺序和视觉一致</h4>
+    <div class="box box-right-same">
+        <div class="full">
+            <p>DOM文档流中，图片定宽在右侧，视觉呈现也在右侧，顺便表现此时一致。</p>
+        </div>
+        <img src="https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/15355336453999a66e56a07~cs_640x640.jpg" class="img">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:45:18
+ * @LastEditTime: 2020-05-31 22:04:58
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 200px">
+        <div style="float: left; opacity: 0.2;">
+            <img src="https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/15355336453999a66e56a07~cs_640x640.jpg"
+                class="img">
+        </div>
+        <p style="background-color: silver;">我想实现文字环绕，因此需要多一些文字看一下效果我想实现文字环绕，因此需要多一些文字看一下效果</p>
+    </div>
+
+    <script>
+        var desc =
+
+            `
+【理论】
+float的两个特性
+1. “破坏文档流”，使得父元素得高度塌陷
+2. 禁止行框盒子与浮动元素发生重叠
+【实践】
+
+`;
+        console.log(desc);
+    </script>
+</body>
+
+</html>

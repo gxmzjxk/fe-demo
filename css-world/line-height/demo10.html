@@ -1,0 +1,52 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:45:18
+ * @LastEditTime: 2020-05-27 18:16:40
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片居中实际生效的CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 128px;
+            background-color: aliceblue;
+            line-height: 128px; /* 关键 CSS */
+        }
+
+        .box img {
+            height: 96px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/15355336453999a66e56a07~cs_640x640.jpg" />
+    </div>
+
+    <script>
+        var desc =
+
+            `
+【理论】
+
+【实践】
+
+`;
+        console.log(desc);
+    </script>
+</body>
+
+</html>

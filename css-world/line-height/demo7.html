@@ -1,0 +1,72 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:45:18
+ * @LastEditTime: 2020-05-27 01:23:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三种 line-height 的区别</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box h3 {
+            font-size: 32px;
+        }
+
+        .box p {
+            font-size: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <section>
+            <h1>line-height：1.5</h1>
+            <div style="line-height: 1.5">
+                <h3>这是标题</h3>
+                <p>这是内容</p>
+            </div>
+        </section>
+        <section>
+            <h1>line-height：150%</h1>
+            <div style="line-height: 150%">
+                <h3>这是标题</h3>
+                <p>这是内容</p>
+            </div>
+        </section>
+        <section>
+            <h1>line-height：1.5em</h1>
+            <div style="line-height: 1.5em">
+                <h3>这是标题</h3>
+                <p>这是内容</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        var desc =
+
+            `
+【理论】
+    1. 如果使用数值（1.5），则子元素继承的都是这个值
+    2. 如果使用百分比或者长度值作为属性值，那么所有的子元素继承的最近一级设置 line-height 计算的最终值
+        例子2/3中，div 下面的子元素 line-height 都是 24px（浏览器默认是16px, 1.5倍就是 24）
+【实践】
+
+`;
+        console.log(desc);
+    </script>
+</body>
+
+</html>

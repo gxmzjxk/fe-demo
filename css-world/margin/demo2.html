@@ -1,0 +1,49 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:44:33
+ * @LastEditTime: 2020-05-25 00:51:13
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>等分三列布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin-right: -20px;
+        }
+
+        ul>li {
+            float: left;
+            width: 33.33%;
+            box-sizing: border-box;
+            margin-right: 20px;
+            height: 100px;
+            background-color: gray;
+            list-style-type: none;
+
+        }
+        li:last-of-type {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+</body>
+
+</html>

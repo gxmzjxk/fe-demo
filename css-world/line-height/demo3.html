@@ -1,0 +1,75 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:45:18
+ * @LastEditTime: 2020-05-27 00:36:08
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .test {
+            display: inline-block;
+            font-family: simsun;
+            font-size: 24px;
+            background-color: yellow;
+        }
+
+        .test>span {
+            outline: 1px solid red;
+        }
+
+        /* 换行实现，content章节有介绍 */
+        .test>span:first-child:after {
+            content: "\A";
+            white-space: pre;
+        }
+
+        .test-1 {
+            line-height: 2;
+        }
+
+        .test-2 {
+            line-height: 1;
+        }
+
+        .test-3 {
+            line-height: .5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test test-1">
+        <span>第1行</span><br><span>第2行</span>
+    </div>
+    <div class="test test-2">
+        <span>第1行</span><br><span>第2行</span>
+    </div>
+    <div class="test test-3">
+        <span>第1行</span><br><span>第2行</span>
+    </div>
+    <script>
+        var desc =
+
+            `
+【理论】
+
+【实践】
+
+`;
+        console.log(desc);
+    </script>
+</body>
+
+</html>

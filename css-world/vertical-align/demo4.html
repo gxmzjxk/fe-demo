@@ -1,0 +1,51 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:45:18
+ * @LastEditTime: 2020-05-30 11:11:59
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline-block 内部有无内容</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dib-baseline {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #cad5eb;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span class="dib-baseline"></span>
+        <span class="dib-baseline" style="line-height: 0;">dib-baseline</span>
+    </div>
+
+    <script>
+        var desc =
+
+            `
+【理论】
+    1. 一个 inline-block 元素，如果里面没有内联元素，或者 overflow 不是 visible，则该元素的基线就是其 margin 底边缘
+    否则其基线就是元素里面最后一个内联元素的基线。
+【实践】
+
+`;
+        console.log(desc);
+    </script>
+</body>
+
+</html>

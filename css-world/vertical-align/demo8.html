@@ -1,0 +1,55 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:45:18
+ * @LastEditTime: 2020-05-31 21:52:26
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .box>span {
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span style="margin-bottom: 10px"></span>
+        <span>我有自己的内x</span>
+    </div>
+
+    <script>
+        var desc =
+
+            `
+【理论】
+
+【实践】
+1. 第一个 inline-block 元素由于没有内容导致其 baseline 位置发生变化，变成了margin 盒子的下边缘，而
+另一个盒子的基线是最后一个行框盒子的基线
+
+`;
+        console.log(desc);
+    </script>
+</body>
+
+</html>

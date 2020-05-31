@@ -1,0 +1,55 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-25 00:45:18
+ * @LastEditTime: 2020-05-27 01:09:53
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            line-height: 120px;
+            background-color: #f0f3f9;
+        }
+
+        .content {
+            display: inline-block;
+            line-height: 20px;
+            margin: 0 20px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+            基于行高实现的多行文本垂直居中效果，需要 vertical-align 属性帮助
+        </div>
+    </div>
+
+    <script>
+        var desc =
+
+            `
+【理论】
+
+【实践】
+
+`;
+        console.log(desc);
+    </script>
+</body>
+
+</html>

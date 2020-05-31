@@ -1,0 +1,76 @@
+<!--
+ * @Description:
+ * @Author: Xiaokun.jiang
+ * @Email: jiangxiaokun@bytedance.com
+ * @Date: 2020-05-24 23:07:26
+ * @LastEditTime: 2020-05-25 00:25:22
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内联元素-Padding 断行</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px dashed #cd0000;
+
+        }
+
+        span {
+            padding: 50%;
+            background-color: rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span>内有文字若干，你能找到自己的定位吗？</span>
+    </div>
+
+    <!--  -->
+    <div class="box" style="margin-top: 100%; font-size: 0">
+        <span></span>
+    </div>
+
+    <script>
+        var desc =
+
+            `
+【理论】
+
+1. 连字符：hyphen，是用于一个合成词的两部分之间的或一个单词的字节之间的一种标点符号，尤其是一行或一段结束时用；对应中划线 -
+2. Line-breaking(w3c): https://www.w3.org/TR/css-text-3/#line-breaking
+3. 使用 Unicode 折行规则：https://www.unicode.org/reports/tr14/tr14-45.html
+    3.1 Determining Line Break Opportunities
+        Three principal styles of context analysis determine line break opportunities.
+
+        Western: spaces and hyphens are used to determine breaks
+        East Asian: lines can break anywhere, unless prohibited
+        South East Asian: line breaks require morphological analysis
+总结
+    1. 西文：空格和连字符，自动换行
+    2. 中文、东亚文字除非禁止换行，否则可能“在任何位置换行”
+    3. 南非：需要词法上的换行符号
+
+【实践】
+1. 将字数删除到只剩一个，不换行但超出（padding-left(50%) + padding-right(50%) + 文字宽度 > 父元素宽度）
+2. 增加到两个，换行了，实际内容超出了父元素，单个区域的宽度到达了 214px（400 屏幕尺寸），因为 padding 跟文字一样具有换行属性，
+  所以目前的宽度是 214px * 2 = 428px，因为换行 + 内联元素 用 padding 撑起的区域不参与实际的布局，所以产生层叠效应，
+  看到实际展现宽度为 214px
+3. 字符增加到很多，效果类似
+
+`;
+        console.log(desc);
+    </script>
+
+</body>
+
+</html>
