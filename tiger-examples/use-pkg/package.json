@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@fe/tiger_show1": "^0.1.0",
+    "@types/react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@fe/tiger": "^0.3.0",
+    "@fe/tt_search_utils": "0.0.42"
+  }
+}
